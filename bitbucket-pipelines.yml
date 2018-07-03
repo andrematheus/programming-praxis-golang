@@ -8,5 +8,6 @@ pipelines:
           - mkdir -pv "\${PACKAGE_PATH}"
           - tar -cO --exclude-vcs --exclude=bitbucket-pipelines.yml . | tar -xv -C "\${PACKAGE_PATH}"
           - cd "\${PACKAGE_PATH}/cmd/rpncalculator"
-          - go build programmingpraxis/cmd/rpmcalculator -v
-          - go test programmingpraxis/cmd/rpncalculator -v
+          - go get -v
+          - go build -v
+          - go test -v
